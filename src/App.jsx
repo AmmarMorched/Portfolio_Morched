@@ -2,10 +2,10 @@ import React, { useState, useEffect, createContext, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { useForm, ValidationError } from '@formspree/react';
 import { 
-  FaGithub, FaLinkedin, FaEnvelope, FaSun, FaMoon, FaGlobe
+  FaGithub, FaLinkedin, FaSun, FaMoon, FaGlobe
 } from 'react-icons/fa';
 import { 
-  FiExternalLink, FiCode, FiCpu, FiTerminal, FiChevronDown, FiCpu as FiProcessor, FiDatabase, FiHardDrive, FiTool, FiServer, FiCheckCircle, FiMonitor
+  FiExternalLink, FiCode, FiCpu, FiTerminal, FiChevronDown, FiCpu as FiProcessor, FiDatabase, FiHardDrive, FiTool, FiServer, FiCheckCircle, FiMonitor, FiBriefcase
 } from 'react-icons/fi';
 
 // --- Translation Context ---
@@ -1015,7 +1015,7 @@ const Footer = () => {
       <div className="flex justify-center gap-6 mb-4">
         <a href="https://www.linkedin.com/in/morched-ammar-805407197/" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors"><FaLinkedin size={20} /></a>
         <a href="https://github.com/AmmarMorched" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors"><FaGithub size={20} /></a>
-        <a href="mailto:morcheda62@gmail.com" className="hover:text-accent transition-colors"><FaEnvelope size={20} /></a>
+        <a href="https://www.upwork.com/freelancers/~0195bd19ed2b85beed" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors"><FiBriefcase size={20} /></a>
       </div>
       <p>{t('footer.builtBy')}</p>
       <p className="mt-2 text-xs text-slate-600">{t('footer.location')}</p>
