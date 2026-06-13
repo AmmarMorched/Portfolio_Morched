@@ -5,7 +5,7 @@ import {
   FaGithub, FaLinkedin, FaEnvelope, FaSun, FaMoon, FaGlobe
 } from 'react-icons/fa';
 import { 
-  FiExternalLink, FiCode, FiCpu, FiTerminal, FiChevronDown, FiCpu as FiProcessor, FiDatabase, FiHardDrive, FiTool
+  FiExternalLink, FiCode, FiCpu, FiTerminal, FiChevronDown, FiCpu as FiProcessor, FiDatabase, FiHardDrive, FiTool, FiServer, FiCheckCircle, FiMonitor
 } from 'react-icons/fi';
 
 // --- Translation Context ---
@@ -18,6 +18,7 @@ const translations = {
       skills: "Skills",
       experience: "Experience",
       projects: "Projects",
+      education: "Education",
       contact: "Contact",
       resume: "Resume",
       resumeEn: "English Resume",
@@ -46,7 +47,11 @@ const translations = {
       title: "Professional Experience"
     },
     projects: {
-      title: "Projects"
+      title: "Projects",
+      inDevelopment: "In Development"
+    },
+    education: {
+      title: "Education"
     },
     contact: {
       title: "What's Next?",
@@ -74,6 +79,7 @@ const translations = {
       skills: "Compétences",
       experience: "Expérience",
       projects: "Projets",
+      education: "Formation",
       contact: "Contact",
       resume: "CV",
       resumeEn: "CV Anglais",
@@ -102,7 +108,11 @@ const translations = {
       title: "Expérience Professionnelle"
     },
     projects: {
-      title: "Projets"
+      title: "Projets",
+      inDevelopment: "En Développement"
+    },
+    education: {
+      title: "Formation"
     },
     contact: {
       title: "Quoi de neuf?",
@@ -130,6 +140,7 @@ const translations = {
       skills: "المهارات",
       experience: "الخبرة",
       projects: "المشاريع",
+      education: "التعليم",
       contact: "اتصل",
       resume: "السيرة الذاتية",
       resumeEn: "السيرة الذاتية بالإنجليزية",
@@ -158,7 +169,11 @@ const translations = {
       title: "الخبرة المهنية"
     },
     projects: {
-      title: "المشاريع"
+      title: "المشاريع",
+      inDevelopment: "قيد التطوير"
+    },
+    education: {
+      title: "التعليم"
     },
     contact: {
       title: "ماذا بعد؟",
@@ -394,6 +409,25 @@ const projects = {
       icon: <FiCpu className="w-8 h-8 text-accent" />,
       linkedin: "https://linkedin.com/posts/your-linkedin-post-4",
       github: "https://github.com/AmmarMorched/STM32_EnergyMonitor_IoT.git"
+    },
+    {
+      title: "CI/CD Pipeline & Observability System",
+      date: "Dec 2023",
+      desc: "Architected a full CI/CD platform for a Spring Boot system using Jenkins and GitHub, enabling automated build, test, and delivery pipelines across the entire development lifecycle. Implemented a robust quality and security workflow integrating JUnit, Mockito, and SonarQube (SAST), enforcing continuous testing and code governance at every commit. Designed a fully containerized DevOps stack with Docker, Nexus, Prometheus, and Grafana, enabling scalable artifact management, observability, and reproducible deployments.",
+      tech: ["Spring Boot", "Jenkins", "GitHub", "JUnit", "Mockito", "SonarQube", "Docker", "Nexus", "Prometheus", "Grafana"],
+      icon: <FiCpu className="w-8 h-8 text-accent" />,
+      linkedin: "https://linkedin.com/posts/your-linkedin-post-5",
+      github: "https://github.com/AmmarMorched"
+    },
+    {
+      title: "Learning Management System (LMS) – Full-Stack Platform",
+      date: "In Development",
+      status: "active",
+      desc: "Currently developing a scalable Learning Management System designed to support end-to-end digital education workflows for students and instructors. The platform focuses on a modular architecture with a React-based student interface and a Spring Boot backend connected to a PostgreSQL database for structured data management. The system already integrates Cloudflare for media and asset storage, ensuring efficient and secure content delivery. Ongoing development focuses on enhancing the student experience and expanding core platform capabilities. Upcoming features include real-time live learning sessions using Jitsi integration, as well as a secure payment system to support premium courses and subscriptions, moving the platform toward a full SaaS-based e-learning solution.",
+      tech: ["React", "Spring Boot", "PostgreSQL", "Cloudflare", "Jitsi", "Payment Systems"],
+      icon: <FiCpu className="w-8 h-8 text-accent" />,
+      linkedin: "https://linkedin.com/posts/your-linkedin-post-6",
+      github: "https://github.com/AmmarMorched"
     }
   ],
   fr: [
@@ -432,6 +466,25 @@ const projects = {
       icon: <FiCpu className="w-8 h-8 text-accent" />,
       linkedin: "https://linkedin.com/posts/your-linkedin-post-4",
       github: "https://github.com/AmmarMorched/STM32_EnergyMonitor_IoT.git"
+    },
+    {
+      title: "Pipeline CI/CD et Système d'Observabilité",
+      date: "Déc 2023",
+      desc: "Conçu une plateforme CI/CD complète pour un système Spring Boot utilisant Jenkins et GitHub, permettant des pipelines de construction, de test et de livraison automatisés sur tout le cycle de développement. Implémenté un workflow de qualité et de sécurité robuste intégrant JUnit, Mockito et SonarQube (SAST), appliquant des tests continus et une gouvernance du code à chaque commit. Conçu une pile DevOps entièrement conteneurisée avec Docker, Nexus, Prometheus et Grafana, permettant une gestion d'artefacts évolutive, une observabilité et des déploiements reproductibles.",
+      tech: ["Spring Boot", "Jenkins", "GitHub", "JUnit", "Mockito", "SonarQube", "Docker", "Nexus", "Prometheus", "Grafana"],
+      icon: <FiCpu className="w-8 h-8 text-accent" />,
+      linkedin: "https://linkedin.com/posts/your-linkedin-post-5",
+      github: "https://github.com/AmmarMorched"
+    },
+    {
+      title: "Système de Gestion de l'Apprentissage (LMS) – Plateforme Full-Stack",
+      date: "En Développement",
+      status: "active",
+      desc: "Développement actuel d'un système de gestion de l'apprentissage évolutif conçu pour soutenir les flux de travail d'éducation numérique de bout en bout pour les étudiants et les instructeurs. La plateforme se concentre sur une architecture modulaire avec une interface étudiante basée sur React et un backend Spring Boot connecté à une base de données PostgreSQL pour la gestion structurée des données. Le système intègre déjà Cloudflare pour le stockage de médias et d'actifs, assurant une livraison de contenu efficace et sécurisée. Le développement en cours se concentre sur l'amélioration de l'expérience étudiante et l'expansion des capacités de base de la plateforme. Les fonctionnalités à venir incluent des sessions d'apprentissage en direct en temps réel avec l'intégration Jitsi, ainsi qu'un système de paiement sécurisé pour soutenir les cours et abonnements premium, faisant passer la plateforme vers une solution d'apprentissage en ligne SaaS complète.",
+      tech: ["React", "Spring Boot", "PostgreSQL", "Cloudflare", "Jitsi", "Systèmes de Paiement"],
+      icon: <FiCpu className="w-8 h-8 text-accent" />,
+      linkedin: "https://linkedin.com/posts/your-linkedin-post-6",
+      github: "https://github.com/AmmarMorched"
     }
   ],
   ar: [
@@ -470,23 +523,91 @@ const projects = {
       icon: <FiCpu className="w-8 h-8 text-accent" />,
       linkedin: "https://linkedin.com/posts/your-linkedin-post-4",
       github: "https://github.com/AmmarMorched/STM32_EnergyMonitor_IoT.git"
+    },
+    {
+      title: "خط أنابيب CI/CD ونظام المراقبة",
+      date: "ديسمبر 2023",
+      desc: "صمم منصة CI/CD كاملة لنظام Spring Boot باستخدام Jenkins وGitHub، مما يتيح خطوط أنابيب آلية للبناء والاختبار والتسليم عبر دورة التطوير بأكملها. نفذ سير عمل قوي للجودة والأمان يدمج JUnit وMockito وSonarQube (SAST)، مما يفرز الاختبارات المستمرة وحوكمة الكود في كل التزام. صمم مكدس DevOps بالكامل في حاويات مع Docker وNexus وPrometheus وGrafana، مما يتيح إدارة الملفات القابلة للتطوير والمراقبة والنشر القابل للتكرار.",
+      tech: ["Spring Boot", "Jenkins", "GitHub", "JUnit", "Mockito", "SonarQube", "Docker", "Nexus", "Prometheus", "Grafana"],
+      icon: <FiCpu className="w-8 h-8 text-accent" />,
+      linkedin: "https://linkedin.com/posts/your-linkedin-post-5",
+      github: "https://github.com/AmmarMorched"
+    },
+    {
+      title: "نظام إدارة التعلم (LMS) – منصة Full-Stack",
+      date: "قيد التطوير",
+      status: "active",
+      desc: "التطوير الحالي لنظام إدارة تعلم قابل للتوسع مصمم لدعم سير عمل التعليم الرقمي من البداية إلى النهاية للطلاب والمعلمين. تركز المنصة على بنية معيارية مع واجهة طالب قائمة على React وbackend Spring Boot متصل بقاعدة بيانات PostgreSQL لإدارة البيانات المنظمة. يدمج النظام بالفعل Cloudflare لتخزين الوسائط والأصول، مما يضمن تسليم محتوى فعال وآمن. يركز التطوير الجاري على تحسين تجربة الطالب وتوسيع قدرات المنصة الأساسية. تشمل الميزات القادمة جلسات تعلم مباشرة في الوقت الفعلي مع تكامل Jitsi، بالإضافة إلى نظام دفع آمن لدعم الدورات والاشتراكات المميزة، مما ينقل المنصة نحو حل تعليم إلكتروني SaaS كامل.",
+      tech: ["React", "Spring Boot", "PostgreSQL", "Cloudflare", "Jitsi", "أنظمة الدفع"],
+      icon: <FiCpu className="w-8 h-8 text-accent" />,
+      linkedin: "https://linkedin.com/posts/your-linkedin-post-6",
+      github: "https://github.com/AmmarMorched"
+    }
+  ]
+};
+
+const education = {
+  en: [
+    {
+      degree: "Engineering degree in Computer Science",
+      school: "ESPRIT – Private Higher School of Engineering and Technology",
+      date: "Sep 2022 - Oct 2025"
+    },
+    {
+      degree: "Bachelor's degree in electronics and automation",
+      school: "ISGIS - Higher Institute of Industrial Management",
+      date: "Sep 2018 - May 2022"
+    }
+  ],
+  fr: [
+    {
+      degree: "Diplôme d'ingénieur en informatique",
+      school: "ESPRIT – École Privée d'Ingénieurs et de Technologies",
+      date: "Sep 2022 - Oct 2025"
+    },
+    {
+      degree: "Licence en électronique et automatique",
+      school: "ISGIS - Institut Supérieur de Gestion Industrielle",
+      date: "Sep 2018 - Mai 2022"
+    }
+  ],
+  ar: [
+    {
+      degree: "شهادة هندسة في علوم الحاسوب",
+      school: "ESPRIT – المدرسة الخاصة للهندسة والتكنولوجيا",
+      date: "سبتمبر 2022 - أكتوبر 2025"
+    },
+    {
+      degree: "إجازة في الإلكترونيات والتحكم الآلي",
+      school: "ISGIS - المعهد العالي للإدارة الصناعية",
+      date: "سبتمبر 2018 - مايو 2022"
     }
   ]
 };
 
 const skills = {
-  "Core Languages": ["C", "Embedded C", "C++", "Python"],
+  "Core Languages": ["C", "Embedded C", "C++", "Python", "Java", "JavaScript"],
+  "Frontend": ["React", "Flutter/Dart"],
+  "Backend": ["Spring Boot", "Flask", "ExpressJS"],
+  "Databases": ["MySQL", "PostgreSQL", "MongoDB"],
   "Edge & Embedded": ["STM32", "ESP32", "Raspberry Pi", "FreeRTOS", "Embedded Linux", "ONNX Runtime"],
   "AI / ML": ["Deep RL (PPO/SB3)", "YOLOv8", "MediaPipe", "OpenCV", "Gymnasium"],
+  "DevOps & CI/CD": ["Jenkins", "GitHub Actions", "Docker", "Nexus", "Prometheus", "Grafana", "Cloudflare"],
+  "Testing": ["JUnit", "Mockito", "SonarQube"],
   "Protocols": ["I2C", "SPI", "UART", "CAN", "OBD-II", "MQTT", "BLE", "Wi-Fi", "TCP/IP"],
   "Hardware": ["PCB Design (EasyEDA, Altium)", "sensor integration"],
-  "Tools": ["Git", "STM32CubeIDE", "Arduino IDE", "VS Code", "Flask", "Flutter/Dart"]
+  "Tools": ["Git", "STM32CubeIDE", "Arduino IDE", "VS Code", "Jitsi", "Payment Systems"]
 };
 
 const categoryIcons = {
   "Core Languages": FiCode,
+  "Frontend": FiMonitor,
+  "Backend": FiServer,
+  "Databases": FiDatabase,
   "Edge & Embedded": FiProcessor,
   "AI / ML": FiCpu,
+  "DevOps & CI/CD": FiCpu,
+  "Testing": FiCheckCircle,
   "Protocols": FiDatabase,
   "Hardware": FiHardDrive,
   "Tools": FiTool
@@ -519,11 +640,14 @@ const Navbar = () => {
           <a href="#experience" className="hover:text-accent transition-colors">
             <span className="text-accent mr-1">03.</span>{t('nav.experience')}
           </a>
+          <a href="#education" className="hover:text-accent transition-colors">
+            <span className="text-accent mr-1">04.</span>{t('nav.education')}
+          </a>
           <a href="#projects" className="hover:text-accent transition-colors">
-            <span className="text-accent mr-1">04.</span>{t('nav.projects')}
+            <span className="text-accent mr-1">05.</span>{t('nav.projects')}
           </a>
           <a href="#contact" className="hover:text-accent transition-colors">
-            <span className="text-accent mr-1">05.</span>{t('nav.contact')}
+            <span className="text-accent mr-1">06.</span>{t('nav.contact')}
           </a>
         </div>
         <div className="flex items-center gap-4">
@@ -713,12 +837,42 @@ const Experience = () => {
   );
 };
 
+const Education = () => {
+  const { t, language } = useLanguage();
+
+  return (
+    <section id="education" className="py-24 px-6 max-w-4xl mx-auto">
+      <SectionHeading number="04" title={t('education.title')} />
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="space-y-12"
+      >
+        {education[language].map((edu, index) => (
+          <motion.div key={index} variants={fadeInUp} className="relative pl-8 border-l-2 border-slate-700 hover:border-accent transition-colors group">
+            <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-700 group-hover:bg-accent transition-colors"></div>
+            <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+              <h3 className="text-xl font-bold text-text">
+                {edu.degree}
+              </h3>
+              <span className="font-mono text-sm text-text-muted mt-1 md:mt-0">{edu.date}</span>
+            </div>
+            <p className="text-text-muted mt-2">{edu.school}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
+  );
+};
+
 const Projects = () => {
   const { t, language } = useLanguage();
 
   return (
     <section id="projects" className="py-24 px-6 max-w-6xl mx-auto">
-      <SectionHeading number="04" title={t('projects.title')} />
+      <SectionHeading number="05" title={t('projects.title')} />
       <motion.div 
         variants={staggerContainer}
         initial="hidden"
@@ -742,7 +896,14 @@ const Projects = () => {
               </div>
             </div>
             <h3 className="text-xl font-bold text-text mb-2 group-hover:text-accent">{project.title}</h3>
-            <p className="font-mono text-xs text-accent mb-4">{project.date}</p>
+            <div className="flex items-center gap-3 mb-4">
+              <p className="font-mono text-xs text-accent">{project.date}</p>
+              {project.status === 'active' && (
+                <span className="px-2 py-1 bg-green-500/10 text-green-400 text-xs font-mono rounded border border-green-500/30">
+                  {t('projects.inDevelopment')}
+                </span>
+              )}
+            </div>
             <p className="text-text-muted mb-6 flex-grow leading-relaxed">
               {project.desc}
             </p>
@@ -773,7 +934,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-mono text-accent mb-4">05. {t('contact.title')}</p>
+          <p className="font-mono text-accent mb-4">06. {t('contact.title')}</p>
           <h2 className="text-4xl md:text-5xl font-bold text-text mb-6">{t('contact.successTitle')}</h2>
           <p className="text-text-muted text-lg mb-10 leading-relaxed">
             {t('contact.successMessage')}
@@ -872,6 +1033,7 @@ function App() {
             <Hero />
             <About />
             <Experience />
+            <Education />
             <Projects />
             <Contact />
           </main>
